@@ -30,52 +30,54 @@
       }
     },
     {
-      "id": "carriageway",
+      "id": "pf",
       "minzoom": 14,
       "maxzoom": 16,
       "fields": {
-        "k": "String: вид элемента"
+        "g": "String: слой рендера",
+        "c": "String: цвет",
+        "a": "Number: альфа",
+        "w": "Number: ширина штриха, м"
       }
     },
     {
-      "id": "junctions",
+      "id": "pl",
       "minzoom": 14,
       "maxzoom": 16,
       "fields": {
-        "k": "String: вид элемента"
-      }
-    },
-    {
-      "id": "sidewalks",
-      "minzoom": 14,
-      "maxzoom": 16,
-      "fields": {
-        "k": "String: вид элемента"
-      }
-    },
-    {
-      "id": "medians",
-      "minzoom": 14,
-      "maxzoom": 16,
-      "fields": {
-        "k": "String: вид элемента"
-      }
-    },
-    {
-      "id": "crossings",
-      "minzoom": 14,
-      "maxzoom": 16,
-      "fields": {
-        "k": "String: вид элемента"
-      }
-    },
-    {
-      "id": "markings",
-      "minzoom": 14,
-      "maxzoom": 16,
-      "fields": {
-        "k": "String: вид элемента"
+        "g": "String: слой рендера",
+        "c": "String: цвет",
+        "a": "Number: альфа",
+        "w": "Number: ширина штриха, м"
       }
     }
+  ],
+  "paint_groups": [
+    "land",
+    "lvlDown",
+    "sw",
+    "bk",
+    "sh",
+    "md",
+    "pk",
+    "surf",
+    "j",
+    "jc",
+    "railBed",
+    "railTie",
+    "rail",
+    "l",
+    "zeb",
+    "stop",
+    "edge",
+    "mark",
+    "lb",
+    "al",
+    "bus",
+    "drv",
+    "lvlUpSh",
+    "lvlUp",
+    "markUp",
+    "alUp"
   ]
 }
