@@ -5,7 +5,7 @@
     "tf": {
       "type": "vector",
       "tiles": [
-        "https://ВАШ_ХОСТ/ПУТЬ/{z}/{x}/{y}.pbf"
+        "https://mikesmaq.github.io/tf-roads/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 10,
       "maxzoom": 16
