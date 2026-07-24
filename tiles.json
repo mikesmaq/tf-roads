@@ -1,0 +1,81 @@
+{
+  "tilejson": "3.0.0",
+  "name": "Transflow RoadEditor — модель УДС",
+  "description": "Дорожная модель, выпеченная из Transflow RoadEditor. Слой roads: r — класс (0 магистраль … 4 местная, 5 проезд), w — ширина полотна, м; tnl=1 — тоннель.",
+  "tiles": [
+    "{z}/{x}/{y}.pbf"
+  ],
+  "minzoom": 10,
+  "maxzoom": 16,
+  "bounds": [
+    30.1789987,
+    59.9191114,
+    30.309528,
+    59.9645389
+  ],
+  "center": [
+    30.24426335,
+    59.94182515,
+    13
+  ],
+  "vector_layers": [
+    {
+      "id": "roads",
+      "minzoom": 10,
+      "maxzoom": 13,
+      "fields": {
+        "r": "Number: класс 0..5",
+        "w": "Number: ширина полотна, м",
+        "tnl": "Number: 1 = тоннель"
+      }
+    },
+    {
+      "id": "carriageway",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "fields": {
+        "k": "String: вид элемента"
+      }
+    },
+    {
+      "id": "junctions",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "fields": {
+        "k": "String: вид элемента"
+      }
+    },
+    {
+      "id": "sidewalks",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "fields": {
+        "k": "String: вид элемента"
+      }
+    },
+    {
+      "id": "medians",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "fields": {
+        "k": "String: вид элемента"
+      }
+    },
+    {
+      "id": "crossings",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "fields": {
+        "k": "String: вид элемента"
+      }
+    },
+    {
+      "id": "markings",
+      "minzoom": 14,
+      "maxzoom": 16,
+      "fields": {
+        "k": "String: вид элемента"
+      }
+    }
+  ]
+}

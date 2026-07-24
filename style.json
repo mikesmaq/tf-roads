@@ -1,0 +1,130 @@
+{
+  "version": 8,
+  "name": "Transflow — иммерсия",
+  "sources": {
+    "tf": {
+      "type": "vector",
+      "tiles": [
+        "https://ВАШ_ХОСТ/ПУТЬ/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 10,
+      "maxzoom": 16
+    }
+  },
+  "layers": [
+    {
+      "id": "bg",
+      "type": "background",
+      "paint": {
+        "background-color": "#eef0f3"
+      }
+    },
+    {
+      "id": "tf-roads",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "roads",
+      "maxzoom": 14,
+      "paint": {
+        "line-color": "#2b3442",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            1.6
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          1.2,
+          13.9,
+          4
+        ]
+      },
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      }
+    },
+    {
+      "id": "tf-sidewalks",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "sidewalks",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#d7dbe2"
+      }
+    },
+    {
+      "id": "tf-medians",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "medians",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#aeb6c2"
+      }
+    },
+    {
+      "id": "tf-carriageway",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "carriageway",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#333a45"
+      }
+    },
+    {
+      "id": "tf-junctions",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "junctions",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#333a45"
+      }
+    },
+    {
+      "id": "tf-crossings",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "crossings",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#e8eaef",
+        "fill-opacity": 0.85
+      }
+    },
+    {
+      "id": "tf-markings",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "markings",
+      "minzoom": 14,
+      "paint": {
+        "line-color": "#f2f4f7",
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0.4,
+          18,
+          2.4
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    }
+  ]
+}
