@@ -1,83 +1,33 @@
 {
   "tilejson": "3.0.0",
-  "name": "Transflow RoadEditor — модель УДС",
-  "description": "Дорожная модель, выпеченная из Transflow RoadEditor. Слой roads: r — класс (0 магистраль … 4 местная, 5 проезд), w — ширина полотна, м; tnl=1 — тоннель.",
+  "name": "Transflow — набор районов",
+  "description": "Набор выпечен по районам: Запад, Восток",
   "tiles": [
     "{z}/{x}/{y}.pbf"
   ],
-  "minzoom": 10,
+  "minzoom": 9,
   "maxzoom": 16,
   "bounds": [
-    30.1789987,
-    59.9191114,
-    30.309528,
-    59.9645389
+    74.9948175,
+    42.9927556,
+    75.0065,
+    43.003
   ],
   "center": [
-    30.24426335,
-    59.94182515,
+    75.00065875,
+    42.9978778,
     13
   ],
-  "vector_layers": [
+  "districts": [
     {
-      "id": "roads",
-      "minzoom": 10,
-      "maxzoom": 13,
-      "fields": {
-        "r": "Number: класс 0..5",
-        "w": "Number: ширина полотна, м",
-        "tnl": "Number: 1 = тоннель"
-      }
+      "id": "Запад",
+      "name": "Запад",
+      "at": "2026-07-25T09:22:08.632Z"
     },
     {
-      "id": "pf",
-      "minzoom": 14,
-      "maxzoom": 16,
-      "fields": {
-        "g": "String: слой рендера",
-        "c": "String: цвет",
-        "a": "Number: альфа",
-        "w": "Number: ширина штриха, м"
-      }
-    },
-    {
-      "id": "pl",
-      "minzoom": 14,
-      "maxzoom": 16,
-      "fields": {
-        "g": "String: слой рендера",
-        "c": "String: цвет",
-        "a": "Number: альфа",
-        "w": "Number: ширина штриха, м"
-      }
+      "id": "Восток",
+      "name": "Восток",
+      "at": "2026-07-25T09:22:09.760Z"
     }
-  ],
-  "paint_groups": [
-    "land",
-    "lvlDown",
-    "sw",
-    "bk",
-    "sh",
-    "md",
-    "pk",
-    "surf",
-    "j",
-    "jc",
-    "railBed",
-    "railTie",
-    "rail",
-    "l",
-    "zeb",
-    "stop",
-    "edge",
-    "mark",
-    "lb",
-    "al",
-    "bus",
-    "drv",
-    "lvlUpSh",
-    "lvlUp",
-    "markUp",
-    "alUp"
   ]
 }

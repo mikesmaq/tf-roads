@@ -1,13 +1,14 @@
 {
   "version": 8,
   "name": "Transflow — иммерсия",
+  "sprite": "https://mikesmaq.github.io/tf-roads/sprite",
   "sources": {
     "tf": {
       "type": "vector",
       "tiles": [
         "https://mikesmaq.github.io/tf-roads/{z}/{x}/{y}.pbf"
       ],
-      "minzoom": 10,
+      "minzoom": 9,
       "maxzoom": 16
     }
   },
@@ -36,8 +37,8 @@
           [
             "zoom"
           ],
-          10,
-          1.2,
+          9,
+          0.8,
           13.9,
           4
         ]
@@ -51,7 +52,7 @@
       "id": "pf-land",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -77,7 +78,7 @@
       "id": "pl-land",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -112,7 +113,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -121,7 +122,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -134,7 +135,7 @@
       "id": "pf-lvlDown",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -160,7 +161,7 @@
       "id": "pl-lvlDown",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -195,7 +196,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -204,7 +205,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -217,7 +218,7 @@
       "id": "pf-sw",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -243,7 +244,7 @@
       "id": "pl-sw",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -278,7 +279,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -287,7 +288,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -300,7 +301,7 @@
       "id": "pf-bk",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -326,7 +327,7 @@
       "id": "pl-bk",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -361,7 +362,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -370,7 +371,90 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
+          ]
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    },
+    {
+      "id": "pf-fp",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "paint_fill",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "fp"
+      ],
+      "paint": {
+        "fill-color": [
+          "get",
+          "c"
+        ],
+        "fill-opacity": [
+          "get",
+          "a"
+        ],
+        "fill-antialias": false
+      }
+    },
+    {
+      "id": "pl-fp",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "paint_line",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "fp"
+      ],
+      "paint": {
+        "line-color": [
+          "get",
+          "c"
+        ],
+        "line-opacity": [
+          "get",
+          "a"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            0.2862026877016694
+          ],
+          22,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            73.26788805162737
           ]
         ]
       },
@@ -383,7 +467,7 @@
       "id": "pf-sh",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -409,7 +493,7 @@
       "id": "pl-sh",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -444,7 +528,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -453,7 +537,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -466,7 +550,7 @@
       "id": "pf-md",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -492,7 +576,7 @@
       "id": "pl-md",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -527,7 +611,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -536,7 +620,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -549,7 +633,7 @@
       "id": "pf-pk",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -575,7 +659,7 @@
       "id": "pl-pk",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -610,7 +694,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -619,7 +703,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -632,7 +716,7 @@
       "id": "pf-surf",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -658,7 +742,7 @@
       "id": "pl-surf",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -693,7 +777,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -702,7 +786,173 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
+          ]
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    },
+    {
+      "id": "pf-curb",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "paint_fill",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "curb"
+      ],
+      "paint": {
+        "fill-color": [
+          "get",
+          "c"
+        ],
+        "fill-opacity": [
+          "get",
+          "a"
+        ],
+        "fill-antialias": false
+      }
+    },
+    {
+      "id": "pl-curb",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "paint_line",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "curb"
+      ],
+      "paint": {
+        "line-color": [
+          "get",
+          "c"
+        ],
+        "line-opacity": [
+          "get",
+          "a"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            0.2862026877016694
+          ],
+          22,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            73.26788805162737
+          ]
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    },
+    {
+      "id": "pf-rbi",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "paint_fill",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "rbi"
+      ],
+      "paint": {
+        "fill-color": [
+          "get",
+          "c"
+        ],
+        "fill-opacity": [
+          "get",
+          "a"
+        ],
+        "fill-antialias": false
+      }
+    },
+    {
+      "id": "pl-rbi",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "paint_line",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "rbi"
+      ],
+      "paint": {
+        "line-color": [
+          "get",
+          "c"
+        ],
+        "line-opacity": [
+          "get",
+          "a"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            0.2862026877016694
+          ],
+          22,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            73.26788805162737
           ]
         ]
       },
@@ -715,7 +965,7 @@
       "id": "pf-j",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -741,7 +991,7 @@
       "id": "pl-j",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -776,7 +1026,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -785,7 +1035,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -798,7 +1048,7 @@
       "id": "pf-jc",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -824,7 +1074,7 @@
       "id": "pl-jc",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -859,7 +1109,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -868,7 +1118,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -881,7 +1131,7 @@
       "id": "pf-railBed",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -907,7 +1157,7 @@
       "id": "pl-railBed",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -942,7 +1192,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -951,7 +1201,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -964,7 +1214,7 @@
       "id": "pf-railTie",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -990,7 +1240,7 @@
       "id": "pl-railTie",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1025,7 +1275,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1034,7 +1284,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1047,7 +1297,7 @@
       "id": "pf-rail",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1073,7 +1323,7 @@
       "id": "pl-rail",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1108,7 +1358,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1117,7 +1367,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1130,7 +1380,7 @@
       "id": "pf-l",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1156,7 +1406,7 @@
       "id": "pl-l",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1191,7 +1441,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1200,7 +1450,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1213,7 +1463,7 @@
       "id": "pf-zeb",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1239,7 +1489,7 @@
       "id": "pl-zeb",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1274,7 +1524,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1283,7 +1533,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1296,7 +1546,7 @@
       "id": "pf-stop",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1322,7 +1572,7 @@
       "id": "pl-stop",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1357,7 +1607,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1366,7 +1616,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1379,7 +1629,7 @@
       "id": "pf-edge",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1405,7 +1655,7 @@
       "id": "pl-edge",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1440,7 +1690,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1449,7 +1699,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1462,7 +1712,7 @@
       "id": "pf-mark",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1488,7 +1738,7 @@
       "id": "pl-mark",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1523,7 +1773,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1532,7 +1782,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1545,7 +1795,7 @@
       "id": "pf-lb",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1571,7 +1821,7 @@
       "id": "pl-lb",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1606,7 +1856,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1615,7 +1865,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1628,7 +1878,7 @@
       "id": "pf-al",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1654,7 +1904,7 @@
       "id": "pl-al",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1689,7 +1939,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1698,7 +1948,90 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
+          ]
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    },
+    {
+      "id": "pf-hump",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "paint_fill",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "hump"
+      ],
+      "paint": {
+        "fill-color": [
+          "get",
+          "c"
+        ],
+        "fill-opacity": [
+          "get",
+          "a"
+        ],
+        "fill-antialias": false
+      }
+    },
+    {
+      "id": "pl-hump",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "paint_line",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "hump"
+      ],
+      "paint": {
+        "line-color": [
+          "get",
+          "c"
+        ],
+        "line-opacity": [
+          "get",
+          "a"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            0.2862026877016694
+          ],
+          22,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            73.26788805162737
           ]
         ]
       },
@@ -1711,7 +2044,7 @@
       "id": "pf-bus",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1737,7 +2070,7 @@
       "id": "pl-bus",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1772,7 +2105,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1781,7 +2114,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1794,7 +2127,7 @@
       "id": "pf-drv",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1820,7 +2153,7 @@
       "id": "pl-drv",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1855,7 +2188,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1864,7 +2197,90 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
+          ]
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    },
+    {
+      "id": "pf-rb",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "paint_fill",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "rb"
+      ],
+      "paint": {
+        "fill-color": [
+          "get",
+          "c"
+        ],
+        "fill-opacity": [
+          "get",
+          "a"
+        ],
+        "fill-antialias": false
+      }
+    },
+    {
+      "id": "pl-rb",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "paint_line",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "rb"
+      ],
+      "paint": {
+        "line-color": [
+          "get",
+          "c"
+        ],
+        "line-opacity": [
+          "get",
+          "a"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            0.2862026877016694
+          ],
+          22,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            73.26788805162737
           ]
         ]
       },
@@ -1877,7 +2293,7 @@
       "id": "pf-lvlUpSh",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1903,7 +2319,7 @@
       "id": "pl-lvlUpSh",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1938,7 +2354,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -1947,7 +2363,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -1960,7 +2376,7 @@
       "id": "pf-lvlUp",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -1986,7 +2402,7 @@
       "id": "pl-lvlUp",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -2021,7 +2437,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -2030,7 +2446,90 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
+          ]
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    },
+    {
+      "id": "pf-lUp",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "paint_fill",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "lUp"
+      ],
+      "paint": {
+        "fill-color": [
+          "get",
+          "c"
+        ],
+        "fill-opacity": [
+          "get",
+          "a"
+        ],
+        "fill-antialias": false
+      }
+    },
+    {
+      "id": "pl-lUp",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "paint_line",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "lUp"
+      ],
+      "paint": {
+        "line-color": [
+          "get",
+          "c"
+        ],
+        "line-opacity": [
+          "get",
+          "a"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            0.2862026877016694
+          ],
+          22,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            73.26788805162737
           ]
         ]
       },
@@ -2043,7 +2542,7 @@
       "id": "pf-markUp",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -2069,7 +2568,7 @@
       "id": "pl-markUp",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -2104,7 +2603,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -2113,7 +2612,7 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
@@ -2126,7 +2625,7 @@
       "id": "pf-alUp",
       "type": "fill",
       "source": "tf",
-      "source-layer": "pf",
+      "source-layer": "paint_fill",
       "minzoom": 14,
       "filter": [
         "==",
@@ -2152,7 +2651,7 @@
       "id": "pl-alUp",
       "type": "line",
       "source": "tf",
-      "source-layer": "pl",
+      "source-layer": "paint_line",
       "minzoom": 14,
       "filter": [
         "==",
@@ -2187,7 +2686,7 @@
               "get",
               "w"
             ],
-            0.4179105168738425
+            0.2862026877016694
           ],
           22,
           [
@@ -2196,13 +2695,296 @@
               "get",
               "w"
             ],
-            106.98509231970368
+            73.26788805162737
           ]
         ]
       },
       "layout": {
         "line-cap": "butt",
         "line-join": "round"
+      }
+    },
+    {
+      "id": "pf-pvar",
+      "type": "fill",
+      "source": "tf",
+      "source-layer": "paint_fill",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "pvar"
+      ],
+      "paint": {
+        "fill-color": [
+          "get",
+          "c"
+        ],
+        "fill-opacity": [
+          "get",
+          "a"
+        ],
+        "fill-antialias": false
+      }
+    },
+    {
+      "id": "pl-pvar",
+      "type": "line",
+      "source": "tf",
+      "source-layer": "paint_line",
+      "minzoom": 14,
+      "filter": [
+        "==",
+        [
+          "get",
+          "g"
+        ],
+        "pvar"
+      ],
+      "paint": {
+        "line-color": [
+          "get",
+          "c"
+        ],
+        "line-opacity": [
+          "get",
+          "a"
+        ],
+        "line-width": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            0.2862026877016694
+          ],
+          22,
+          [
+            "*",
+            [
+              "get",
+              "w"
+            ],
+            73.26788805162737
+          ]
+        ]
+      },
+      "layout": {
+        "line-cap": "butt",
+        "line-join": "round"
+      }
+    },
+    {
+      "id": "tf-sign-post",
+      "type": "circle",
+      "source": "tf",
+      "source-layer": "signs",
+      "minzoom": 15,
+      "filter": [
+        "==",
+        [
+          "get",
+          "k"
+        ],
+        0
+      ],
+      "paint": {
+        "circle-radius": 1.8,
+        "circle-color": "#2a3340",
+        "circle-opacity": 0.85
+      }
+    },
+    {
+      "id": "tf-sign-0",
+      "type": "symbol",
+      "source": "tf",
+      "source-layer": "signs",
+      "minzoom": 15,
+      "filter": [
+        "==",
+        [
+          "get",
+          "k"
+        ],
+        0
+      ],
+      "layout": {
+        "icon-image": [
+          "get",
+          "ic"
+        ],
+        "icon-size": 0.34375,
+        "icon-rotate": [
+          "get",
+          "r"
+        ],
+        "icon-rotation-alignment": "map",
+        "icon-offset": [
+          "literal",
+          [
+            0,
+            -108.8
+          ]
+        ],
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true
+      }
+    },
+    {
+      "id": "tf-sign-1",
+      "type": "symbol",
+      "source": "tf",
+      "source-layer": "signs",
+      "minzoom": 15,
+      "filter": [
+        "==",
+        [
+          "get",
+          "k"
+        ],
+        1
+      ],
+      "layout": {
+        "icon-image": [
+          "get",
+          "ic"
+        ],
+        "icon-size": 0.34375,
+        "icon-rotate": [
+          "get",
+          "r"
+        ],
+        "icon-rotation-alignment": "map",
+        "icon-offset": [
+          "literal",
+          [
+            0,
+            -176
+          ]
+        ],
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true
+      }
+    },
+    {
+      "id": "tf-sign-2",
+      "type": "symbol",
+      "source": "tf",
+      "source-layer": "signs",
+      "minzoom": 15,
+      "filter": [
+        "==",
+        [
+          "get",
+          "k"
+        ],
+        2
+      ],
+      "layout": {
+        "icon-image": [
+          "get",
+          "ic"
+        ],
+        "icon-size": 0.34375,
+        "icon-rotate": [
+          "get",
+          "r"
+        ],
+        "icon-rotation-alignment": "map",
+        "icon-offset": [
+          "literal",
+          [
+            0,
+            -243.2
+          ]
+        ],
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true
+      }
+    },
+    {
+      "id": "tf-sign-3",
+      "type": "symbol",
+      "source": "tf",
+      "source-layer": "signs",
+      "minzoom": 15,
+      "filter": [
+        "==",
+        [
+          "get",
+          "k"
+        ],
+        3
+      ],
+      "layout": {
+        "icon-image": [
+          "get",
+          "ic"
+        ],
+        "icon-size": 0.34375,
+        "icon-rotate": [
+          "get",
+          "r"
+        ],
+        "icon-rotation-alignment": "map",
+        "icon-offset": [
+          "literal",
+          [
+            0,
+            -310.40000000000003
+          ]
+        ],
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true
+      }
+    },
+    {
+      "id": "tf-signal",
+      "type": "symbol",
+      "source": "tf",
+      "source-layer": "traffic_signals",
+      "minzoom": 15,
+      "layout": {
+        "icon-image": [
+          "get",
+          "ic"
+        ],
+        "icon-size": 0.46875,
+        "icon-rotate": [
+          "get",
+          "r"
+        ],
+        "icon-rotation-alignment": "map",
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true
+      },
+      "paint": {
+        "icon-opacity": [
+          "case",
+          [
+            "==",
+            [
+              "get",
+              "dup"
+            ],
+            1
+          ],
+          0.75,
+          1
+        ]
       }
     }
   ]
